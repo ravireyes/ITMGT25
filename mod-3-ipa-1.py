@@ -59,11 +59,14 @@ def caesar_cipher(message, shift):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
     encrypted_text=""
-    for i in range(len(message)):
-        if message[i]==" ":
-            encrypted_text=encrypted_text + message[i]
+    
+    for i in message:
+        if i==" ":
+            encrypted_text += i
+        elif i.isupper:
+            encrypted_text += chr((ord(i)+int(shift)-65)%26+65)
         else:
-            encrypted_text=encrypted_text + chr((ord(message[i]))+shift)
+            encrypted_text += chr((ord(i)+int(shift)-97)%26+97)
     return encrypted_text
 
 def shift_by_letter(letter, letter_shift):
