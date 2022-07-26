@@ -229,15 +229,15 @@ def scytale_decipher(message, shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    
-    def scytale_decipher(message, shift):
-        final_message = ""
+
+    final_message = ""
     
     while(len(final_message)<len(message)):
-        final_message += "_"
+          final_message += "_"
           
     for i,m in enumerate(message):
         new_letter_index = (i//shift) + (len(message) // shift) * (i % shift)
-    for j,n in enumerate(final_message):
-        final_message = final_message[:new_letter_index] + m + final_message[new_letter_index+1:]
+        for j,n in enumerate(final_message):
+            final_message = final_message[:new_letter_index] + m + final_message[new_letter_index+1:]
+            
     return final_message
