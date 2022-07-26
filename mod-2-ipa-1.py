@@ -1,3 +1,5 @@
+import math
+
 '''Module 2: Individual Programming Assignment 1
 Useful Business Calculations
 This assignment covers your basic proficiency with Python.
