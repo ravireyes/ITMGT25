@@ -125,23 +125,19 @@ def vigenere_cipher(message, key):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    def key_creator(message,key):
-        key = list(key)
-        if len(message)==len(key):
-            return key
+    key_length = len(key)
+    key_int = [ord(i) for i in key]
+    message_int = [ord(i) for i in message]
+
+    cipher = ""
+
+    for i in range(len(message_int)):
+        if message[i] == " ":
+            cipher += " "
         else:
-            for i in range (len(message)-len(key)):
-                key.append(key[i%len(key)])
-        return("" . join(key))
-            
-    def cipher(message,key):
-        cipher_text==[]
-        for i in range(len(message)):
-            x = (ord(message[i]) +
-             ord(key[i])) % 26
-            x += ord('A')
-            cipher_text.append(chr(x))
-        return("" . join(cipher_text))
+            ciphervalue = (message_int[i]+key_int[i%key_length])%26
+            cipher += chr(ciphervalue+65)
+    return cipher
 
 def scytale_cipher(message, shift):
     '''Scytale Cipher.
