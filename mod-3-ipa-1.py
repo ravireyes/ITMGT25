@@ -189,11 +189,10 @@ def scytale_cipher(message, shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    
-    def scytale_cipher(message, shift):
-        message = str(message)
-        shift = int(shift)
-        cipher = ""
+
+    message = str(message)
+    shift = int(shift)
+    cipher = ""
     
     while len(message)%shift != 0:
         message += "_"
